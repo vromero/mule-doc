@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="first-30-minutes-with-mule"/>
+    <meta name="dtb:depth" content="1"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>First 30 Minutes with Mule</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="item_introduction" playOrder="1">
+      <navLabel>
+        <text>Introduction</text>
+      </navLabel>
+      <content src="introduction.xhtml"/>
+    </navPoint>
+    <navPoint id="item_anypoint-platform-primer" playOrder="2">
+      <navLabel>
+        <text>Anypoint Platform Primer</text>
+      </navLabel>
+      <content src="anypoint-platform-primer.xhtml"/>
+    </navPoint>
+    <navPoint id="item_begin-with-the-basics" playOrder="3">
+      <navLabel>
+        <text>Begin with the Basics</text>
+      </navLabel>
+      <content src="begin-with-the-basics.xhtml"/>
+    </navPoint>
+    <navPoint id="item_download-and-launch-anypoint-studio" playOrder="4">
+      <navLabel>
+        <text>Download and Launch Anypoint Studio</text>
+      </navLabel>
+      <content src="download-and-launch-anypoint-studio.xhtml"/>
+    </navPoint>
+    <navPoint id="item_anypoint-studio-essentials " playOrder="5">
+      <navLabel>
+        <text>Anypoint Studio Essentials </text>
+      </navLabel>
+      <content src="anypoint-studio-essentials .xhtml"/>
+    </navPoint>
+    <navPoint id="item_build-a-hello-world-application" playOrder="6">
+      <navLabel>
+        <text>Build a Hello World Application</text>
+      </navLabel>
+      <content src="build-a-hello-world-application.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

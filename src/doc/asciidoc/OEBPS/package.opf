@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="pub-identifier">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:language id="pub-language">en</dc:language>
+    <dc:identifier id="pub-identifier">first-30-minutes-with-mule</dc:identifier>
+    <meta property="identifier-type" refines="#pub-identifier">uuid</meta>
+    <dc:title id="pub-title">First 30 Minutes with Mule</dc:title>
+    <meta property="title-type" refines="#pub-title">main</meta>
+    <dc:creator id="creator1">MuleSoft Inc.</dc:creator>
+    <meta property="role" refines="#creator1">aut</meta>
+    <dc:creator id="creator2">Asciidoctor</dc:creator>
+    <meta property="role" refines="#creator2">mfr</meta>
+    <dc:contributor>MuleSoft Inc.</dc:contributor>
+    <dc:date>2014-07-29T14:45:13Z</dc:date>
+    <meta property="dcterms:modified">2014-07-29T17:45:14Z</meta>
+    <meta name="cover" content="item_cover"/>
+  </metadata>
+  <manifest>
+    <item id="item_epub3" href="styles/epub3.css" media-type="text/css"/>
+    <item id="item_epub3-css3-only" href="styles/epub3-css3-only.css" media-type="text/css"/>
+    <item id="item_epub3-fonts" href="styles/epub3-fonts.css" media-type="text/css"/>
+    <item id="item_notoserif-regular-latin" href="fonts/notoserif-regular-latin.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_notoserif-italic-latin" href="fonts/notoserif-italic-latin.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_notoserif-bold-latin" href="fonts/notoserif-bold-latin.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_notoserif-bolditalic-latin" href="fonts/notoserif-bolditalic-latin.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_mplus1p-regular-latin" href="fonts/mplus1p-regular-latin.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_mplus1p-light-latin" href="fonts/mplus1p-light-latin.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_mplus1p-bold-latin" href="fonts/mplus1p-bold-latin.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_mplus1mn-regular-ascii-conums" href="fonts/mplus1mn-regular-ascii-conums.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_mplus1mn-italic-ascii" href="fonts/mplus1mn-italic-ascii.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_mplus1mn-bold-ascii" href="fonts/mplus1mn-bold-ascii.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_mplus1mn-bolditalic-ascii" href="fonts/mplus1mn-bolditalic-ascii.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_fontawesome-icons" href="fonts/fontawesome-icons.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_assorted-icons" href="fonts/assorted-icons.ttf" media-type="application/x-font-ttf"/>
+    <item id="item_cover" href="images/jacket/cover.png" media-type="image/png" properties="cover-image"/>
+    <item id="item_default" href="images/avatars/default.jpg" media-type="image/jpeg"/>
+    <item id="item_default1" href="images/headshots/default.jpg" media-type="image/jpeg"/>
+    <item id="item_nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="item_introduction" href="introduction.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="item_anypoint-platform-primer" href="anypoint-platform-primer.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="item_begin-with-the-basics" href="begin-with-the-basics.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="item_download-and-launch-anypoint-studio" href="download-and-launch-anypoint-studio.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="item_anypoint-studio-essentials " href="anypoint-studio-essentials .xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="item_build-a-hello-world-application" href="build-a-hello-world-application.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover"/>
+    <itemref idref="item_introduction"/>
+    <itemref idref="item_anypoint-platform-primer"/>
+    <itemref idref="item_begin-with-the-basics"/>
+    <itemref idref="item_download-and-launch-anypoint-studio"/>
+    <itemref idref="item_anypoint-studio-essentials "/>
+    <itemref idref="item_build-a-hello-world-application"/>
+  </spine>
+</package>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Anypoint Platform Primer</title>
+<link rel="stylesheet" type="text/css" href="styles/epub3.css"/>
+<link rel="stylesheet" type="text/css" href="styles/epub3-css3-only.css" media="(min-device-width: 0px)"/>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function(event) {
+  var epubReader = navigator.epubReadingSystem;
+  if (!epubReader) {
+    if (window.parent == window || !(epubReader = window.parent.navigator.epubReadingSystem)) {
+      return;
+    }
+  }
+  document.body.setAttribute('class', epubReader.name.toLowerCase().replace(/ /g, '-'));
+});
+</script>
+</head>
+<body>
+<section class="chapter" title="Anypoint Platform Primer" epub:type="chapter" id="anypoint-platform-primer">
+<header>
+<div class="chapter-header">
+<p class="byline"><img src="images/avatars/default.jpg"/> <b class="author">MuleSoft Inc.</b></p>
+<h1 class="chapter-title"> <small class="subtitle"><b>ANYPOINT</b> <b>PLATFORM</b> <b>PRIMER</b></small></h1>
+</div>
+</header>
+<div class="abstract" epub:type="preamble">
+<p>Welcome to the documentation for MuleSoft&#8217;s Anypoint Platform™. Follow the links
+below to learn more about the platform components and underlying
+concepts. </p>
+</div>
+<section class="sect2" title="Anypoint Platform">
+<h3 id="_anypoint_platform">Anypoint Platform</h3>
+<p>Anypoint Platform is a complete integration platform for SOA, SaaS
+integration, and APIs. Anypoint Platform provides a comprehensive set of
+tools and services to help you achieve your integration goals:</p>
+<div class="itemized-list">
+<ul>
+<li>
+<span class="principal">Integrate SaaS and on-premises applications</span>
+</li>
+<li>
+<span class="principal">Modernize legacy services</span>
+</li>
+<li>
+<span class="principal">Orchestrate business processes and services</span>
+</li>
+<li>
+<span class="principal">Design and publish APIs for end customers, B2B, or mobile</span>
+</li>
+<li>
+<span class="principal">Create API proxies to separate implementation from orchestration</span>
+</li>
+<li>
+<span class="principal">Engage consumers of your API</span>
+</li>
+<li>
+<span class="principal">Govern APIs with runtime policies</span>
+</li>
+</ul>
+</div>
+<p>There are several entry-points to the platform, depending on your
+business case. Explore the options below.</p>
+<div class="itemized-list">
+<ul>
+<li>
+<span class="principal"><a href="http://www.mulesoft.org/documentation/display/current/Anypoint+Platform+Primer#AnypointPlatformPrimer-api" class="link">Anypoint Platform for APIs</a>﻿</span>
+</li>
+<li>
+<span class="principal"><a href="http://www.mulesoft.org/documentation/display/current/Anypoint+Platform+Primer#AnypointPlatformPrimer-saas" class="link">Anypoint Platform for SaaS Integration</a>﻿</span>
+</li>
+<li>
+<span class="principal"><a href="http://www.mulesoft.org/documentation/display/current/Anypoint+Platform+Primer#AnypointPlatformPrimer-soa" class="link">Anypoint Platform for SOA</a>﻿</span>
+</li>
+</ul>
+</div>
+</section>
+<section class="sect2" title="Anypoint Platform for APIs">
+<h3 id="_anypoint_platform_for_apis">Anypoint Platform for APIs</h3>
+<p>The <strong>Anypoint Platform for APIs</strong>﻿ facilitates the entire API lifecycle,
+from design to management to publishing.</p>
+<p>Use <strong>API Designer</strong>﻿ a web based tool to help you quickly design RESTful
+APIs. Once you’ve designed it, you or other developers can use the <strong>API
+Notebook</strong>﻿ to explore the API, test it, and iteratively improve it.</p>
+<p>Once you are happy with the design of your API, you can build it with
+APIkit, open-source tooling included in <strong>Anypoint</strong>﻿™*
+Studio*.<strong> APIkit</strong>﻿ is a simple, easy-to-use framework that automatically
+generates an integration structure for your API, so you can hook into
+your services and data sources.</p>
+<p>Deploy your API to the <strong>API Gateway</strong>﻿, a dedicated orchestration layer
+where you can deploy Mule-based APIs or proxies of already-built APIs.
+Once your API is running, you can use <strong>Anypoint API Manager</strong>﻿ as your
+single point of management for all your APIs to control access, enforce
+SLAs, and monitor users and traffic to keep APIs and services running at
+peak performance. Developers building applications that use your API can
+register for access on a dedicated <strong>API Portal</strong>﻿ page, where they can
+discover, test out, and access documentation for your API.</p>
+<div class="ordered-list arabic">
+<h3>How to Get Started</h3>
+<ol class="arabic">
+<li>
+<span class="principal">To get started building your API with Anypoint Studio, you’ll want
+to work through the rest of Mule Fundamentals, starting
+with <a href="Anypoint+Platform+Primer/Begin+with+the+Basics.asciidoc" class="link">Begin with the Basics</a>﻿.</span>
+</li>
+<li>
+<span class="principal">Advance to the <a href="Anypoint+Platform+Primer/APIkit.asciidoc" class="link">APIkit</a>﻿ overview.</span>
+</li>
+<li>
+<span class="principal">To get started designing and managing APIs, jump to
+the <a href="Anypoint+Platform+Primer/Anypoint+Platform+for+APIs.asciidoc" class="link">Anypoint
+Platform for APIs documentation</a>﻿.</span>
+</li>
+</ol>
+</div>
+</section>
+<section class="sect2" title="Anypoint Platform for SaaS Integration">
+<h3 id="_anypoint_platform_for_saas_integration">Anypoint Platform for SaaS Integration</h3>
+<p>Mule&#8217;s integration platform helps you connect applications, orchestrate
+business processes, and publish new services and APIs.</p>
+<p>Design your integrations with <strong>Anypoint Studio</strong>﻿, Anypoint
+Platform&#8217;s graphical design environment. With Studio, you can assemble
+your integration flow using intuitive drag-and-drop tool or using XML.
+Use* Anypoint Connectors* to connect to over 120 SaaS and on-premises
+applications, or connect through standard protocols such as web
+services, HTTP, or FTP.</p>
+<p>Run your integrations either in the cloud via <strong>CloudHub</strong>﻿ or on-premises
+with <strong>Mule ESB</strong>﻿. CloudHub is an integration Platform as a Service
+(iPaaS) which provides everything you need to run your integrations in
+the cloud. With Mule ESB, you can deploy your integrations to any
+data-center – on premises or in the cloud&#8201;&#8212;&#8201;and manage them with the
+<strong>Mule Management Console</strong>﻿.</p>
+</section>
+<section class="sect1" title="How to Get Started">
+<h2 id="_how_to_get_started">How to Get Started</h2>
+<div class="ordered-list arabic">
+<ol class="arabic">
+<li>
+<span class="principal">To get started building integrations with Anypoint Studio, you’ll
+want to work through the rest of Mule Fundamentals, starting with
+<a href="Anypoint+Platform+Primer/Begin+with+the+Basics.asciidoc" class="link">Begin with the
+Basics</a>﻿.</span>
+</li>
+<li>
+<span class="principal">Interested in checking out CloudHub first? Follow the
+<a href="Anypoint+Platform+Primer/Getting+Started+with+CloudHub.asciidoc" class="link">Getting
+Started with CloudHub</a>﻿ guide.</span>
+</li>
+</ol>
+</div>
+</section>
+<section class="sect1" title="Anypoint Platform for SOA">
+<h2 id="_anypoint_platform_for_soa">Anypoint Platform for SOA</h2>
+<p><strong>Mule ESB</strong>﻿ is a Java-based enterprise service bus (ESB) and integration
+platform that allows developers to quickly and easily connect
+applications to exchange data following the service-oriented
+architecture (SOA) methodology. Mule enables easy integration of
+existing systems, regardless of the different technologies that the
+applications use, including JMS, Web Services, Java-based databases,
+HTTP, and more.</p>
+<p>A lightweight, open-source middleware, Mule provides comprehensive
+application integration. The Enterprise Service Bus (ESB) at Mule’s core
+facilitates connections within an organization as well as secure
+external connections to Web-based APIs and other cloud resources via
+<strong>Anypoint Connectors</strong>﻿. Build applications using <strong>Anypoint Studio</strong>﻿,
+leveraging pre-packaged building blocks designed to “plug in” to the
+standardized interface provided by the Mule service bus. Mule runtimes
+allow you to deploy and run multiple applications simultaneously and
+manage them standalone or in high-availability clusters using <strong>Mule
+Management Console</strong>﻿ or <strong>CloudHub</strong>﻿.</p>
+<aside class="admonition note" title="Note" epub:type="note">
+<div class="content">
+<p>You may be thinking, "So, is Mule similar to an application server like
+JBoss or Tomcat?" Although there is an overlap in functionality, Mule
+differs significantly from a web application server.
+<a href="Anypoint+Platform+Primer/Mule+versus+Web+Application+Server.asciidoc" class="link">Find
+out how</a>﻿.</p>
+</div>
+</aside>
+<section class="sect2" title="How to Get Started">
+<h3 id="_how_to_get_started_2">How to Get Started</h3>
+<div class="ordered-list arabic">
+<ol class="arabic">
+<li>
+<span class="principal">To get started building integrations with Anypoint Studio, you’ll
+want to work through the rest of Mule Fundamentals, starting
+with <a href="Anypoint+Platform+Primer/Begin+with+the+Basics.asciidoc" class="link">Begin
+with the Basics</a>﻿.</span>
+</li>
+<li>
+<span class="principal">If you&#8217;re interested in diving into the operations side of the
+platform, check out
+<a href="Anypoint+Platform+Primer/Mule+Management+Console.asciidoc" class="link">MuleManagement Console</a>﻿
+(if you deploy on-premises) or
+<a href="Anypoint+Platform+Primer/CloudHub.asciidoc" class="link">CloudHub</a>﻿ if you deploy to
+a VPC.</span>
+</li>
+</ol>
+</div>
+</section>
+</section>
+<section class="sect1" title="Meet Mule">
+<h2 id="_meet_mule">Meet Mule</h2>
+<p>Let&#8217;s take a quick tour of MuleSoft&#8217;s Anypoint Platform and its related
+products, breaking things down into three basic stages of application
+development and operations: <strong>design and develop</strong>﻿,<strong> deploy</strong>﻿, <strong>manage</strong>﻿.</p>
+<section class="sect2" title="Design and Develop">
+<h3 id="_design_and_develop">Design and Develop</h3>
+<p><strong><a href="Anypoint+Platform+Primer/Anypoint+Studio+Essentials.asciidoc" class="link">Anypoint™ Studio</a>﻿</strong>﻿
+is MuleSoft&#8217;s Eclipse-based integrated development environment
+(IDE). Studio provides a powerful “drag and drop” application builder,
+and includes a companion XML editing environment for developers who
+prefer to edit code directly. Anypoint Studio is also
+<a href="Anypoint+Platform+Primer/Studio+in+Eclipse.asciidoc" class="link">available as an Eclipse plug-in</a>﻿.</p>
+<p>Anypoint Studio contains the following features:</p>
+<div class="table">
+<div class="content">
+<table class="table table-framed-topbot table-grid-rows" style="width: 100%;">
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+<tbody>
+<tr>
+<td><p><img src="images/datamapper.png" alt="image"/></p></td>
+<td><p>The
+powerful <strong><a href="Anypoint+Platform+Primer/Datamapper+User+Guide+and+Reference.asciidoc" class="link">Anypoint™
+DataMapper</a>﻿</strong>﻿ feature built into Anypoint Studio not only transforms
+payloads from one data format to another, it can map input fields to
+output fields as well as filter, enrich, and route message payloads. </p></td>
+</tr>
+<tr>
+<td><p><img src="images/apiKit.png" alt="image"/></p></td>
+<td><p><strong><a href="Anypoint+Platform+Primer/APIkit.asciidoc" class="link">APIkit</a>﻿</strong>﻿ is an open-source,
+declarative toolkit specially designed to facilitate REST API design and
+development. Add the APIkit module to your instance of Studio.</p></td>
+</tr>
+<tr>
+<td><p><img src="images/connector.png" alt="image"/></p></td>
+<td><p>A large and ever-expanding assortment of bundled and
+premium <strong><a href="Anypoint+Platform+Primer/Anypoint+Connectors.asciidoc" class="link">Anypoint™
+Connectors</a>﻿</strong>﻿ facilitates quick, easy integration with SaaS applications,
+APIs, and common protocols.</p></td>
+</tr>
+<tr>
+<td><p><strong><img src="images/datasense.png" alt="image"/></strong>﻿</p></td>
+<td><p><strong><a href="Anypoint+Platform+Primer/DataSense.asciidoc" class="link">DataSense</a>﻿</strong>﻿ uses message
+metadata to proactively acquire information such as data type and
+structure in order to prescribe how to accurately map or use data in
+your application.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="sect2" title="Deploy">
+<h3 id="_deploy">Deploy</h3>
+<div class="table">
+<div class="content">
+<table class="table table-framed-topbot table-grid-rows" style="width: 100%;">
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+<tbody>
+<tr>
+<td><p><img src="images/studioembeddedserver.png" alt="image"/></p></td>
+<td><p>Deploy to the <strong>embedded server</strong>﻿ bundled with Anypoint Studio for testing and debugging.</p></td>
+</tr>
+<tr>
+<td><p><img src="images/mule-server.png" alt="image"/></p></td>
+<td><p>Deploy to an <strong>ESB Standalone server,</strong>﻿ available as an Enterprise or Community product.</p></td>
+</tr>
+<tr>
+<td><p><img src="images/cloud-cloudhub.png" alt="image"/></p></td>
+<td><p>Deploy to <strong><a href="Anypoint+Platform+Primer/CloudHub.asciidoc" class="link">CloudHub</a>﻿</strong>﻿, the world&#8217;s first integration Platform as a Service (iPaaS). Built on top of Mule, CloudHub allows you to integrate and orchestrate applications, data sources, and services across on-premise systems and the cloud.</p></td>
+</tr>
+<tr>
+<td><p><img src="images/mulesoft-database-customapp.png" alt="image"/></p></td>
+<td><p><strong>Publish APIs or API proxies to an
+*<a href="Anypoint+Platform+Primer/API+Gateway.asciidoc" class="link">API Gateway</a>﻿</strong>﻿ to enable
+effective governance and support service reuse within your organization.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="sect2" title="Manage">
+<h3 id="_manage">Manage</h3>
+<div class="table">
+<div class="content">
+<table class="table table-framed-topbot table-grid-rows" style="width: 100%;">
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+<tbody>
+<tr>
+<td><p><img src="images/mmc.png" alt="image"/></p></td>
+<td><p>The <strong><a href="Anypoint+Platform+Primer/Mule+Management+Console.asciidoc" class="link">Mule
+Management Console</a>﻿</strong>﻿ facilitates deployment to the Mule Repository and
+subsequent deployment to Mule
+<a href="Anypoint+Platform+Primer/Mule+High+Availability+HA+Clusters.asciidoc" class="link">high-availability
+clusters</a>﻿. It provides robust runtime management capabilities for
+on-premises deployments.</p></td>
+</tr>
+<tr>
+<td><p><img src="images/CH_insight.png" alt="image"/></p></td>
+<td><p><strong><a href="Anypoint+Platform+Primer/CloudHub+Insight.asciidoc" class="link">CloudHub
+Insight</a>﻿</strong>﻿ tracks everything your data does in an application deployed to
+CloudHub. Insight makes information searchable and helps you find and
+recover from any errors that occurred during message processing.</p></td>
+</tr>
+<tr>
+<td><p><img src="images/AnypointAPI_manager.png" alt="AnypointAPI_manager"/></p></td>
+<td><p><strong><a href="Anypoint+Platform+Primer/API+Manager.asciidoc" class="link">API Manager</a>﻿</strong>﻿ is an API
+and service registry and governance platform. Built from the ground up
+to support hybrid use cases, API Manager governs all of your service and
+API assets, whether they’re internal or external, behind the firewall or
+on the cloud, on a single platform. </p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+</section>
+</body>
+</html>

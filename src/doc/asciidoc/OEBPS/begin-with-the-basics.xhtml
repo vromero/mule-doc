@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Begin with the Basics</title>
+<link rel="stylesheet" type="text/css" href="styles/epub3.css"/>
+<link rel="stylesheet" type="text/css" href="styles/epub3-css3-only.css" media="(min-device-width: 0px)"/>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function(event) {
+  var epubReader = navigator.epubReadingSystem;
+  if (!epubReader) {
+    if (window.parent == window || !(epubReader = window.parent.navigator.epubReadingSystem)) {
+      return;
+    }
+  }
+  document.body.setAttribute('class', epubReader.name.toLowerCase().replace(/ /g, '-'));
+});
+</script>
+</head>
+<body>
+<section class="chapter" title="Begin with the Basics" epub:type="chapter" id="begin-with-the-basics">
+<header>
+<div class="chapter-header">
+<p class="byline"><img src="images/avatars/default.jpg"/> <b class="author">MuleSoft Inc.</b></p>
+<h1 class="chapter-title"> <small class="subtitle"><b>BEGIN</b> <b>WITH</b> <b>THE</b> <b>BASICS</b></small></h1>
+</div>
+</header>
+<div class="abstract" epub:type="preamble">
+<p>The following sections aim to help you get up to speed on some key
+Anypoint Platform™ concepts you&#8217;ll need to be familiar with to be
+successful. If you feel that you need more background on any of these
+concepts, follow the provided links to the appropriate reference
+material.</p>
+</div>
+<section class="sect2" title="Flows and Messages">
+<h3 id="_flows_and_messages">Flows and Messages</h3>
+<p>Mule applications accept and process messages through a series of <strong>message
+processors</strong>﻿ plugged together in a <strong>flow</strong>﻿. A typical flow has a <strong>message
+source</strong>﻿, which accepts a message from an external source triggering the
+execution of the flow, and any number of <strong>message processors</strong>﻿, which
+transform, filter, enrich, and otherwise process the message. A single
+flow can be a complete application by itself, or you can connect
+multiple flows together to create more complex applications.   </p>
+<p>Mule applications also make use of <strong>global elements</strong>﻿, which are reusable
+chunks of code that sit outside of flows and can be invoked by multiple
+elements in any flow within the application.</p>
+<p>A Mule message consists of a <strong>header</strong>﻿ and a <strong>payload</strong>﻿. The payload
+contains the message data, and the header contains metadata about the
+message in the form of <strong>properties</strong>﻿ and <strong>variables</strong>﻿. Both properties and
+variables are key-value pairs that contain useful information about a
+message that help to get it where it&#8217;s going. </p>
+<p><img src="images/flow.png" alt="image"/></p>
+<aside class="admonition tip" title="Tip: Learn more" epub:type="help">
+<h2>Learn more</h2>
+<div class="content">
+<p><a href="http://www.mulesoft.org/documentation/display/current/Mule+Concepts" class="link">Mule Concepts</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/Global+Elements" class="link">Global Elements</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/Basic+Studio+Tutorial" class="link">Basic Studio Tutorial</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/Mule+Message+Tutorial" class="link">Mule Message Tutorial</a>﻿</p>
+</div>
+</aside>
+</section>
+<section class="sect2" title="Message Processors">
+<h3 id="_message_processors">Message Processors</h3>
+<p>Use <strong>Message Processors</strong>﻿ to act upon a message to manipulate or enrich the
+message payload, or to add or remove message properties or variables.
+Divided into groups according to their function, each message processor
+falls into one of several categories:</p>
+<div class="itemized-list">
+<ul>
+<li>
+<span class="principal">*Connectors *plug into external data sources via standard protocols or
+third-party APIs</span>
+</li>
+<li>
+<span class="principal"><strong>Filters</strong>﻿ limit processing of messages based on set criteria.</span>
+</li>
+<li>
+<span class="principal"><strong>Components</strong>﻿ execute specific logic upon a message, including
+custom-logic programmed in Java, Javascript, Groovy, Python or Ruby.</span>
+</li>
+<li>
+<span class="principal"><strong>Routers</strong>﻿ direct messages through different pathways in an application
+depending upon content or other set criteria.</span>
+</li>
+<li>
+<span class="principal"><strong>Scopes</strong>﻿ wrap snippets of code to define fine-grained behavior within
+a flow.</span>
+</li>
+<li>
+<span class="principal"><strong>Transformers</strong>﻿ convert data types and formats so as to "translate"
+messages between applications or systems.</span>
+</li>
+<li>
+<span class="principal"><strong>Exception Strategies</strong>﻿ handle any errors that occur during message
+processing.</span>
+</li>
+<li>
+<span class="principal"><strong>Business Events</strong>﻿ capture data related to key performance indicators</span>
+</li>
+</ul>
+</div>
+<aside class="admonition tip" title="Tip: Learn more" epub:type="help">
+<h2>Learn more</h2>
+<div class="content">
+<p><a href="http://www.mulesoft.org/documentation/display/current/Message+Processors" class="link">Batch Processing</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/Error+Handling" class="link">Example: Salesforce to Database with Batch</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/Business+Events" class="link">Business Events</a>﻿</p>
+</div>
+</aside>
+</section>
+<section class="sect2" title="Batch Processing">
+<h3 id="_batch_processing">Batch Processing</h3>
+<p>Anypoint Studio also supports <strong>batch jobs</strong>﻿ as an alternative to standard flows. A
+batch job is a block of code that splits messages into individual
+records, performs actions upon each record, then reports on the results
+and potentially pushes the processed output to other systems or queues.
+This functionality is particularly useful when working with streaming
+input or when engineering "near real-time" data integration between SaaS
+applications.</p>
+<aside class="admonition tip" title="Tip: Learn more" epub:type="help">
+<h2>Learn more</h2>
+<div class="content">
+<p><a href="http://www.mulesoft.org/documentation/display/current/Batch+Processing" class="link">Batch Processing</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/Salesforce+to+Database+Example" class="link">Example: Salesforce to Database with Batch</a>﻿</p>
+</div>
+</aside>
+</section>
+<section class="sect2" title="Mule Expression Language">
+<h3 id="_mule_expression_language">Mule Expression Language</h3>
+<p>Mule Expression Language (MEL)* is the primary language used for formulating
+expressions in Mule, allowing you to access, manipulate, and use
+information from the message and its environment. </p>
+<p>At runtime, Mule evaluates expressions while executing a flow to:</p>
+<div class="itemized-list">
+<ul>
+<li>
+<span class="principal">extract information that it can use to process the current message</span>
+</li>
+<li>
+<span class="principal">set or manipulate a value in the message header or payload</span>
+</li>
+<li>
+<span class="principal">perform an operation on information in the message, application, Mule instance, or server</span>
+</li>
+</ul>
+</div>
+<figure class="listing">
+<pre class="source language-xml"><code>#[message.inboundProperties.propertyName]</code></pre>
+</figure>
+<aside class="admonition tip" title="Tip: Learn more" epub:type="help">
+<h2>Learn more</h2>
+<div class="content">
+<p><a href="http://www.mulesoft.org/documentation/display/current/Mule+Expression+Language+MEL" class="link">Mule Expression Language </a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/Mule+Expression+Language+Basic+Syntax" class="link">Mule Expression Language Basic Syntax</a>﻿</p>
+</div>
+</aside>
+</section>
+<section class="sect2" title="Running Applications">
+<h3 id="_running_applications">Running Applications</h3>
+<p>Once you have created a Mule application, then what? How and where do you
+make the code come to life so you can see it in action? The quickest,
+easiest way is to deploy your application on the embedded <strong>Mule Server</strong>﻿,
+included with Anypoint Studio. There&#8217;s a shiny <strong>play</strong>﻿ button on the top
+menu bar, just like in Eclipse. Click it and Studio deploys your
+application to a virtual server running on your machine.</p>
+<p>This is great for testing, but probably not ideal for the final
+implementation of your service; there are several other deployment
+options to chose from:</p>
+<div class="itemized-list">
+<ul>
+<li>
+<span class="principal">export the application to a <strong>Mule Enterprise Server</strong>﻿</span>
+</li>
+<li>
+<span class="principal">deploy the application in the <strong>Mule Management Console&#8217;s</strong>﻿ Application
+Repository</span>
+</li>
+<li>
+<span class="principal">deploy to <strong>CloudHub</strong>﻿</span>
+</li>
+<li>
+<span class="principal">deploy to an <strong>API Gateway</strong>﻿</span>
+</li>
+</ul>
+</div>
+<aside class="admonition tip" title="Tip: Learn more" epub:type="help">
+<h2>Learn more</h2>
+<div class="content">
+<p><a href="http://www.mulesoft.org/documentation/display/current/Deploying+Mule+Applications" class="link">Deploying Mule Applications</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/Deployment+Scenarios" class="link">Deployment Scenarios</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/Mule+Management+Console" class="link">Mule Management Console</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/CloudHub" class="link">CloudHub</a>﻿</p>
+<p><a href="http://www.mulesoft.org/documentation/display/current/API+Gateway" class="link">API Gateway</a>﻿</p>
+</div>
+</aside>
+</section>
+</section>
+</body>
+</html>
