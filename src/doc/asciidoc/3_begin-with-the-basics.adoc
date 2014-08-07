@@ -9,7 +9,7 @@ material.
 == Flows and Messages
 
 Mule applications accept and process messages through a series of *message
-processors* plugged together in a *flow*. A typical flow has a *message
+processors* plugged TEST together in a *flow*. A typical flow has a *message
 source*, which accepts a message from an external source triggering the
 execution of the flow, and any number of *message processors*, which
 transform, filter, enrich, and otherwise process the message. A single
