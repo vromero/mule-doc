@@ -1,196 +1,223 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <groupId>org.mule</groupId>
-  <artifactId>mule-doc</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>Asciidoc generation</name>
-  <packaging>pom</packaging> 
+    <modelVersion>4.0.0</modelVersion>
 
-  <prerequisites>
-    <maven>3.0.0</maven>
-  </prerequisites>
+    <groupId>org.mule</groupId>
+    <artifactId>mule-doc</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>Asciidoctor Maven Example</name>
+    <description>An example project that demonstrates how to process AsciiDoc using the Asciidoctor Maven plugin.</description>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <asciidoctor.version>0.1.4</asciidoctor.version>
-    <docbkx.version>2.0.14</docbkx.version>
-    <UMLet.version>1.1.6</UMLet.version>
-    <isDraft>no</isDraft>
-  </properties>
+	<issueManagement>
+	    <url>https://github.com/kevinsawicki/github-maven-example/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
 
+	<licenses>
+		<license>
+			<name>CPAL License</name>
+			<url>http://opensource.org/licenses/CPAL-1.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
-  <build>
-    <plugins>
+	<scm>
+		<url>https://github.com/vromero/mule-doc</url>
+		<connection>scm:git:git://github.com/vromero/mule-doc.git</connection>
+		<developerConnection>scm:git:git@github.com:vromero/mule-doc.git</developerConnection>
+	</scm>
 
-      <!-- 
-        Asciidoctor plugin (asciidoc to docbook5) 
-       -->
-      <plugin>
-        <groupId>org.asciidoctor</groupId>
-        <artifactId>asciidoctor-maven-plugin</artifactId>
-        <version>${asciidoctor.version}</version> 
-        
-        <configuration>
-          <sourceDocumentName>0_index.adoc</sourceDocumentName>
-          <sourceDirectory>${basedir}/src/doc/asciidoc</sourceDirectory>
-          <imagesDir>${basedir}/src/doc/asciidoc/images</imagesDir>
-        </configuration>
+	<developers>
+		<developer>
+			<email>victor.romero@gmail.com</email>
+			<name>Victor Romero</name>
+			<url>https://github.com/vromero</url>
+			<id>vromero</id>
+		</developer>
+	</developers>
 
-        <executions>
-		  <execution>
-		        <id>output-html</id>
-		        <phase>generate-resources</phase>
-		        <goals>
-		            <goal>process-asciidoc</goal>
-		        </goals>
-		        <configuration>
-                    <outputDirectory>${project.build.directory}/html</outputDirectory> 
-		            <sourceHighlighter>coderay</sourceHighlighter>
-		            <backend>html</backend>
-		            <attributes>
-		                <toc2/>
-		                <linkcss>false</linkcss>
-		            </attributes>
-		        </configuration>
-		  </execution>
-          <execution>
-            <id>output-docbook</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>process-asciidoc</goal>
-            </goals>
-            <configuration>
-                <doctype>book</doctype>
-                <backend>docbook5</backend>
-		        <outputDirectory>${project.build.directory}/docbook</outputDirectory> 
-		    </configuration>
-          </execution>
-        </executions>
-      </plugin>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<github.global.server>github</github.global.server>
+	</properties>
 
-      <!--
-        docbkx plugin (docbook to PDF)
-      -->
-      <plugin>
-        <groupId>com.agilejava.docbkx</groupId>
-        <artifactId>docbkx-maven-plugin</artifactId>
-        <version>${docbkx.version}</version>
-        <dependencies>
-          <!-- Docbook definition -->
-          <dependency>
-            <groupId>net.sf.docbook</groupId>
-            <artifactId>docbook-xml</artifactId>
-            <version>5.0-all</version>
-            <classifier>resources</classifier>
-            <type>zip</type>
-            <scope>runtime</scope>
-          </dependency>
-          <!-- XSLT syntax highlighting -->
-          <dependency>
-            <groupId>net.sf.xslthl</groupId>
-            <artifactId>xslthl</artifactId>
-            <version>2.0.1</version>
-            <scope>runtime</scope>
-          </dependency>
-          <!-- FOP hyphenation module -->
-          <dependency>
-            <groupId>net.sf.offo</groupId>
-            <artifactId>fop-hyph</artifactId>
-            <version>1.2</version>
-            <scope>runtime</scope>
-          </dependency>
-        </dependencies>
+    <build>
+        <defaultGoal>process-resources</defaultGoal>
 
-        <executions>
-          <execution>
-             <phase>compile</phase>
-            <goals>
-              <goal>generate-pdf</goal>
-            </goals>
-          </execution>
-        </executions>
+        <plugins>
+	
+            <plugin>
+                <groupId>de.saumya.mojo</groupId>
+                <artifactId>gem-maven-plugin</artifactId>
+                <version>1.0.5</version>
+                <configuration>
+                    <!-- align with AsciidoctorJ -->
+                    <jrubyVersion>1.7.9</jrubyVersion>
+                    <gemHome>${project.build.directory}/gems</gemHome>
+                    <gemPath>${project.build.directory}/gems</gemPath>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>initialize</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
-        <!-- docbkx configuration -->        
-        <configuration>
-          <!-- location of the docbook sources -->
-          <sourceDirectory>${project.build.directory}/docbook</sourceDirectory>
-          <includes>*.xml</includes>
-          <imgSrcPath>${basedir}src/doc/asciidoc/images</imgSrcPath>
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <version>1.5.0</version>
 
-          <!-- output directory -->
-          <targetDirectory>${project.build.directory}/pdf</targetDirectory>
+                <configuration>
+                    <sourceDirectory>src/main/asciidoc</sourceDirectory>
+                    <gemPath>${project.build.directory}/gems-provided</gemPath>
+                    <!-- QUESTION can the Maven plugin handle fetching and installing the additional gems too? -->
+                    <requires>
+                        <require>asciidoctor-diagram</require>
+                    </requires>
+                    <!-- If you set baseDir to ${project.basedir}, non-nested includes are resolved relative to project -->
+                    <!--
+                    <baseDir>${project.basedir}</baseDir>
+                    -->
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>generate-html-doc</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>html5</backend>
+                            <sourceHighlighter>coderay</sourceHighlighter>
+                            <attributes>
+                                <imagesdir>./images</imagesdir>
+                                <toc>left</toc>
+                                <icons>font</icons>
+                                <sectanchors>true</sectanchors>
+                                <idprefix/>
+                                <idseparator>-</idseparator>
+                                <docinfo1>true</docinfo1>
+                                <publish-url>http://example.org</publish-url>
+                                <sourcedir>${project.build.sourceDirectory}</sourcedir>
+                            </attributes>
+                        </configuration>
+                    </execution>
 
-          <!-- Docbook/FOP customization -->
-          <foCustomization>${basedir}/src/doc/docbkx/fo-stylesheets/docbook.xsl</foCustomization>
-          <externalFOPConfiguration>${basedir}/src/doc/docbkx/fop-config/fop.xconf</externalFOPConfiguration>
+                    <execution>
+                        <id>generate-epub3</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+							<sourceDocumentName>0_index.adoc</sourceDocumentName>
+                            <backend>epub3</backend>
+                            <sourceHighlighter>coderay</sourceHighlighter>
+                            <attributes>
+                                <imagesdir>./images</imagesdir>
+                                <toc>left</toc>
+                                <icons>font</icons>
+                                <sectanchors>true</sectanchors>
+                                <idprefix/>
+                                <idseparator>-</idseparator>
+                                <docinfo1>true</docinfo1>
+                                <publish-url>http://example.org</publish-url>
+                                <sourcedir>${project.build.sourceDirectory}</sourcedir>
+                            </attributes>
+                        </configuration>
+                    </execution>
 
+                </executions>
+            </plugin>
 
-          <!-- "Draft" processing control -->
-          <draftMode>${isDraft}</draftMode>
-          <draftWatermarkImage>${basedir}/src/doc/docbkx/images/draft.jpg</draftWatermarkImage>
+            <!--
+            NOTE: Use the maven-resources-plugin if there are assets outside the AsciiDoc source folder
+                  that need to be copied to the generated-docs. The Maven plugin automatically copies
+                  non-AsciiDoc files in the AsciiDoc source folder to generated-docs.
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>copy-asciidoc-resources</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>**/*.jpg</include>
+                                        <include>**/*.png</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                            <outputDirectory>target/generated-docs</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            -->
 
-          <!-- Admonastation control -->
-          <admonGraphics>true</admonGraphics>
-          <admonTextlabel>false</admonTextlabel>
+       
 
-          <!-- other docbkx configuration -->
-          <paperType>A4</paperType>
-          <highlightSource>1</highlightSource>
-          <ulinkShow>0</ulinkShow>
+			<plugin>
+			      <groupId>com.github.github</groupId>
+			      <artifactId>site-maven-plugin</artifactId>
+			      <version>0.10-SNAPSHOT</version>
+			      <configuration>
+					<server>github-mule-doc</server>
+			        <message>Creating site for ${project.version}</message>
+					<outputDirectory></outputDirectory>
+			      </configuration>
+			      <executions>
+			        <execution>
+			          <goals>
+			            <goal>site</goal>
+			          </goals>
+			          <phase>site</phase>
+			        </execution>
+			      </executions>
+		    </plugin>
 
-          <!-- FOP customization parameters -->
-          <customizationParameters>
-            <parameter>
-              <name>header.image.filename</name>
-              <value>${basedir}/src/doc/docbkx/images/AsciidoctorLogoSmall.jpeg</value>
-            </parameter>
-            <parameter>
-              <name>admon.graphics.path</name>
-              <value>${basedir}/src/doc/docbkx/images/</value>
-            </parameter>
-            <parameter>
-              <name>admon.graphics.extension</name>
-              <value>.jpg</value>
-            </parameter>
-          </customizationParameters>
+        </plugins>
+    </build>
 
-        </configuration>
-      </plugin>
+    <dependencies>
+        <dependency>
+            <groupId>rubygems</groupId>
+            <artifactId>asciidoctor-diagram</artifactId>
+            <version>1.2.0</version>
+            <type>gem</type>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>rubygems</groupId>
+                    <artifactId>asciidoctor</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
 
-
-      <!-- 
-        Plugin to copy things around during the build process
-      -->
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>2.6</version>
-        <executions> 
-
-          <!-- copy static images to the build image directory -->
-          <execution>
-            <id>copy-staticImages</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${project.build.directory}/images</outputDirectory>
-              <resources>          
-                <resource>
-                  <directory>${basedir}/src/doc/docbkx/images</directory>
-                  <includes>
-                    <include>*.*</include>
-                  </includes>
-                </resource>
-              </resources>              
-            </configuration>            
-          </execution>
-        </executions>
-      </plugin>
-
-    </plugins>
-  </build>
+	<repositories>
+        <repository>
+            <id>rubygems-proxy-releases</id>
+            <name>RubyGems.org Proxy (Releases)</name>
+            <url>http://rubygems-proxy.torquebox.org/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>

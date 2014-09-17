@@ -1,0 +1,17 @@
+= First 30 Minutes with Mule
+:author: MuleSoft Inc.
+:toc: left
+:icons: font
+:numbered:
+:website: http://mulesoft.org/
+:front-cover-image: image:first30.png[width=1050,height=1600]
+:imagesdir: images
+
+:leveloffset: 1
+include::1_first-30-minutes-with-mule.adoc[]
+include::2_anypoint-platform-primer.adoc[]
+include::3_begin-with-the-basics.adoc[]
+include::4_download-and-launch-anypoint-studio.adoc[]
+include::5_anypoint-studio-essentials.adoc[]
+include::6_build+a+hello+world+application.adoc[]
+:leveloffset: 0
